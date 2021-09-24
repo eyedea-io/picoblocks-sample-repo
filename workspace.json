@@ -1,0 +1,162 @@
+{
+  "version": 2,
+  "projects": {
+    "picoblocks-sample-repo": {
+      "root": "apps/picoblocks-sample-repo",
+      "sourceRoot": "apps/picoblocks-sample-repo/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/picoblocks-sample-repo",
+            "index": "apps/picoblocks-sample-repo/src/index.html",
+            "main": "apps/picoblocks-sample-repo/src/main.tsx",
+            "polyfills": "apps/picoblocks-sample-repo/src/polyfills.ts",
+            "tsConfig": "apps/picoblocks-sample-repo/tsconfig.app.json",
+            "assets": [
+              "apps/picoblocks-sample-repo/src/favicon.ico",
+              "apps/picoblocks-sample-repo/src/assets"
+            ],
+            "styles": ["apps/picoblocks-sample-repo/src/styles.css"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/picoblocks-sample-repo/src/environments/environment.ts",
+                  "with": "apps/picoblocks-sample-repo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "picoblocks-sample-repo:build",
+            "hmr": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "picoblocks-sample-repo:build:production",
+              "hmr": false
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "apps/picoblocks-sample-repo/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/picoblocks-sample-repo"],
+          "options": {
+            "jestConfig": "apps/picoblocks-sample-repo/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "storybook": {
+          "executor": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "port": 4400,
+            "config": {
+              "configFolder": "apps/picoblocks-sample-repo/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "executor": "@nrwl/storybook:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "uiFramework": "@storybook/react",
+            "outputPath": "dist/storybook/picoblocks-sample-repo",
+            "config": {
+              "configFolder": "apps/picoblocks-sample-repo/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        }
+      }
+    },
+    "picoblocks-sample-repo-e2e": {
+      "root": "apps/picoblocks-sample-repo-e2e",
+      "sourceRoot": "apps/picoblocks-sample-repo-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/picoblocks-sample-repo-e2e/cypress.json",
+            "devServerTarget": "picoblocks-sample-repo:serve",
+            "tsConfig": "apps/picoblocks-sample-repo-e2e/tsconfig.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "picoblocks-sample-repo:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/picoblocks-sample-repo-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "css",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "picoblocks-sample-repo"
+}
