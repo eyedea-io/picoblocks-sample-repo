@@ -4,8 +4,8 @@
 
 ---
 
-## This repository contains instructions on working with Picoblocks.
-## It also serves as a sample showcase of the component structure in a Picoblocks-enabled repository.
+### This repository contains instructions on working with Picoblocks.
+### It also serves as a sample showcase of the component structure in a Picoblocks-enabled repository.
 
 ---
 
