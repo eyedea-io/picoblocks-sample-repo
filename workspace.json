@@ -98,7 +98,7 @@
           "outputs": ["{options.outputPath}"],
           "options": {
             "uiFramework": "@storybook/react",
-            "outputPath": "dist/storybook/picoblocks-sample-repo",
+            "outputPath": "docs",
             "config": {
               "configFolder": "apps/picoblocks-sample-repo/.storybook"
             }
