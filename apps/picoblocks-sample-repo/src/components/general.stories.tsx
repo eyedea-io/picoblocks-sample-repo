@@ -1,11 +1,25 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
+import Button from './button/button';
 
 export default {
   title: 'General',
 } as Meta;
 
-export const Typography: Story = (args) => (
+export const Figma = () => {
+  return (
+    <a
+      href="https://www.figma.com/file/xT1bWfKpkQEiURofNpQhgn/Website-Components-Example?node-id=0%3A1"
+      target="_blank"
+      rel="noreferrer"
+      className="text-xl"
+    >
+      <Button>Figma design link</Button>
+    </a>
+  );
+};
+
+export const Typography: Story = () => (
   <div className="grid grid-cols-2 w-180 gap-8">
     <div className="text-sm">regular16</div>
     <div className="text-gray-500 regular16">regular16</div>
@@ -33,14 +47,7 @@ export const Typography: Story = (args) => (
   </div>
 );
 
-export const Shadows: Story = (args) => (
-  <div className="grid grid-cols-2 w-180 gap-8">
-    <div className="text-sm">base</div>
-    <div className="bg-white shadow-base w-32 h-32"></div>
-  </div>
-);
-
-export const Colors: Story = (args) => (
+export const Colors: Story = () => (
   <div className="grid grid-cols-2 w-180 gap-8">
     <div className="text-sm">indigo-500</div>
     <div className="bg-indigo-500 border border-gray-500 w-32 h-32" />
@@ -56,5 +63,12 @@ export const Colors: Story = (args) => (
 
     <div className="text-sm">gray-white</div>
     <div className="bg-white border border-gray-500 w-32 h-32" />
+  </div>
+);
+
+export const Shadows: Story = () => (
+  <div className="grid grid-cols-2 w-180 gap-8">
+    <div className="text-sm">base</div>
+    <div className="bg-white shadow-base w-32 h-32"></div>
   </div>
 );

@@ -4,6 +4,12 @@ import FeatureItem, { FeatureItemProps } from './feature-item';
 
 export default {
   title: 'Components/FeatureItem',
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/xT1bWfKpkQEiURofNpQhgn/Website-Components-Example?node-id=4%3A335',
+    },
+  },
 } as Meta;
 
 export const Default: Story<FeatureItemProps> = () => (

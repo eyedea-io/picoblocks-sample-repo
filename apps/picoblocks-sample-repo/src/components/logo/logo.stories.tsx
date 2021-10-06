@@ -4,6 +4,12 @@ import { Logo } from './logo';
 
 export default {
   title: 'Components/Logo',
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/xT1bWfKpkQEiURofNpQhgn/Website-Components-Example?node-id=4%3A81',
+    },
+  },
 } as Meta;
 
 export const Default: Story = (args) => <Logo {...args} />;

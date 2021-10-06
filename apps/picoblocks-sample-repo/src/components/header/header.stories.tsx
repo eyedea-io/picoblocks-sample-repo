@@ -4,6 +4,12 @@ import Header, { HeaderProps } from './header';
 
 export default {
   title: 'Components/Header',
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/xT1bWfKpkQEiURofNpQhgn/Website-Components-Example?node-id=4%3A119',
+    },
+  },
 } as Meta;
 
 export const Default: Story<HeaderProps> = (args) => (

@@ -4,6 +4,12 @@ import FeaturesHeader, { FeaturesHeaderProps } from './features-header';
 
 export default {
   title: 'Components/FeaturesHeader',
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/xT1bWfKpkQEiURofNpQhgn/Website-Components-Example?node-id=4%3A341',
+    },
+  },
 } as Meta;
 
 export const Default: Story<FeaturesHeaderProps> = (args) => (
