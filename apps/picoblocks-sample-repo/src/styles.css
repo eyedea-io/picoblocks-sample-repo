@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  @apply font-inter;
+}
+
+@layer base {
+  @responsive {
+    .medium16 {
+      @apply font-medium leading-6;
+    }
+    .medium18 {
+      @apply text-lg font-medium leading-7;
+    }
+    .medium20 {
+      @apply text-xl font-medium leading-7;
+    }
+    .extrabold36 {
+      @apply text-2xl font-extrabold leading-10;
+    }
+    .extrabold60 {
+      @apply text-3xl font-extrabold leading-15;
+    }
+    .semibold16 {
+      @apply font-semibold leading-6;
+    }
+    .regular16 {
+      @apply leading-6;
+    }
+    .regular20 {
+      @apply text-xl leading-7;
+    }
+  }
+}
