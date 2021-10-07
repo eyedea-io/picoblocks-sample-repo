@@ -9,15 +9,34 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
-
-      - name: Install and Build 🔧 
+      - name: Install NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+      - name: Cache NPM
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: >
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Install 🔧 
         run: |
           npm install
+      - name: Install 🔧 
+        run: |
           npm run build picoblocks-sample-repo:build-storybook
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: docs
-          folder: docs/storybook/picoblocks-sample-repo
+          folder: docs
           target-folder: docs

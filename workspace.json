@@ -110,33 +110,6 @@
           }
         }
       }
-    },
-    "picoblocks-sample-repo-e2e": {
-      "root": "apps/picoblocks-sample-repo-e2e",
-      "sourceRoot": "apps/picoblocks-sample-repo-e2e/src",
-      "projectType": "application",
-      "targets": {
-        "e2e": {
-          "executor": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/picoblocks-sample-repo-e2e/cypress.json",
-            "devServerTarget": "picoblocks-sample-repo:serve",
-            "tsConfig": "apps/picoblocks-sample-repo-e2e/tsconfig.json"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "picoblocks-sample-repo:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["apps/picoblocks-sample-repo-e2e/**/*.{js,ts}"]
-          }
-        }
-      }
     }
   },
   "cli": {
