@@ -26,12 +26,6 @@ export const Default: Story<ButtonProps> = (args) => (
   </div>
 );
 
-export const Full: Story<ButtonProps> = (args) => (
-  <div style={{ maxWidth: 400 }}>
-    <Button full>Get started</Button>
-  </div>
-);
-
 export const VariantWhite: Story<ButtonProps> = (args) => (
   <div style={{ maxWidth: 400 }}>
     <Button variant="white">Get started</Button>

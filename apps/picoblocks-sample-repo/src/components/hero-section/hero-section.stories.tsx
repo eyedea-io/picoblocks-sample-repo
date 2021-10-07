@@ -5,6 +5,7 @@ import HeroSection from './hero-section';
 export default {
   title: 'Sections/HeroSection',
   parameters: {
+    layout: 'fullscreen',
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/xT1bWfKpkQEiURofNpQhgn/Website-Components-Example?node-id=4%3A120',

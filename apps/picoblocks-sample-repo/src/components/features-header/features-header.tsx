@@ -11,10 +11,14 @@ export const FeaturesHeader: React.FC<FeaturesHeaderProps> = ({
   children,
 }) => {
   return (
-    <div className="text-center">
-      <h5 className="text-indigo-600 mb-2 semibold16 uppercase">{eyebrow}</h5>
-      <h2 className="text-gray-900 extrabold36 mb-4">{title}</h2>
-      <p className="text-gray-500 regular20">{children}</p>
+    <div className="lg:text-center">
+      <h5 className="text-indigo-600 semibold16 uppercase tracking-wide">
+        {eyebrow}
+      </h5>
+      <h2 className="text-gray-900 extrabold36 mt-2 text-2xl sm:text-3xl">
+        {title}
+      </h2>
+      <p className="text-gray-500 regular20 mt-4">{children}</p>
     </div>
   );
 };

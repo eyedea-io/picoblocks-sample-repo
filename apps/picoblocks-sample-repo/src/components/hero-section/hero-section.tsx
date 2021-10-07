@@ -8,18 +8,17 @@ import { ReactComponent as AngledSeparatorSvg } from './angled-separator.svg';
 
 export const HeroSection: React.FC = () => {
   return (
-    <div className={cx('relative', styles.HeroSectionHeight)}>
-      <div className={'absolute top-0 right-0 bottom-0'}>
-        <img src={bannerImage} alt="" className="h-full" />
+    <div
+      className={cx('relative max-w-7xl lg:pl-10', styles.HeroSectionHeight)}
+    >
+      <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-3xl lg:w-full lg:pb-32 xl:pb-32">
         <div
           className={
-            'absolute left-0 top-0 bottom-0 text-white -translate-x-1/2 transform-gpu'
+            'hidden lg:block absolute right-0 top-0 bottom-0 text-white translate-x-1/2 transform-gpu'
           }
         >
           <AngledSeparatorSvg />
         </div>
-      </div>
-      <div className="max-w-320 relative">
         <Header
           items={[
             {
@@ -45,7 +44,7 @@ export const HeroSection: React.FC = () => {
             },
           ]}
         />
-        <div className="mt-28 pr-180">
+        <div className="mt-10 md:mt-16 lg:mt-28">
           <HeroText
             title1="Data to enrich your"
             title2="online business"
@@ -59,6 +58,13 @@ export const HeroSection: React.FC = () => {
             fugiat aliqua.
           </HeroText>
         </div>
+      </div>
+      <div
+        className={
+          'lg:absolute h-56 sm:h-72 md:h-96 lg:h-auto top-0 right-0 bottom-0 overflow-hidden'
+        }
+      >
+        <img src={bannerImage} alt="" className="w-full h-full object-cover" />
       </div>
     </div>
   );

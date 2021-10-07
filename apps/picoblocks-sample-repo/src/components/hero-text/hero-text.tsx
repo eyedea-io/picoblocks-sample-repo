@@ -18,14 +18,20 @@ export const HeroText: React.FC<HeroTextProps> = ({
   children,
 }) => {
   return (
-    <section className="px-8">
-      <h1 className="mb-5">
-        <span className="text-gray-900 extrabold60">{title1}</span>
+    <section className="px-4 md:px-8 flex flex-col items-start sm:items-center lg:items-start">
+      <h1 className="mb-5 text-left sm:text-center lg:text-justify">
+        <span className="text-gray-900 text-3xl sm:text-4xl md:text-5xl font-extrabold leading-10 sm:leading-12 md:leading-15">
+          {title1}
+        </span>
         <br />
-        <span className="text-indigo-600 extrabold60">{title2}</span>
+        <span className="text-indigo-600 text-3xl sm:text-4xl md:text-5xl font-extrabold leading-10 sm:leading-12 md:leading-15">
+          {title2}
+        </span>
       </h1>
-      <p className="regular20 text-gray-500 mb-8">{children}</p>
-      <div className="flex gap-3">
+      <p className="text-gray-500 mb-8 text-left sm:text-center lg:text-left mr-8 text-base sm:text-lg md:text-xl">
+        {children}
+      </p>
+      <div className="flex justify-center lg:justify-start self-stretch flex-col sm:flex-row gap-3">
         {buttons.map((button, index) => (
           <Button
             onClick={button.action}

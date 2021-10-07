@@ -21,10 +21,10 @@ body {
       @apply text-xl font-medium leading-7;
     }
     .extrabold36 {
-      @apply text-2xl font-extrabold leading-10;
+      @apply text-3xl font-extrabold leading-10;
     }
     .extrabold60 {
-      @apply text-3xl font-extrabold leading-15;
+      @apply text-5xl font-extrabold leading-15;
     }
     .semibold16 {
       @apply font-semibold leading-6;

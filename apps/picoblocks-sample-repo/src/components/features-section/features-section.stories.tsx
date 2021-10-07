@@ -5,6 +5,7 @@ import FeaturesSection from './features-section';
 export default {
   title: 'Sections/FeaturesSection',
   parameters: {
+    layout: 'fullscreen',
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/xT1bWfKpkQEiURofNpQhgn/Website-Components-Example?node-id=7%3A116',

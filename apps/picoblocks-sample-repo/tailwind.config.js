@@ -9,14 +9,16 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
+      sm: '640px',
       md: '768px',
-      lg: '1536px',
+      lg: '1024px',
     },
     fontFamily: {
       inter: 'Inter',
       sans: ['Work Sans', 'sans-serif'],
     },
     colors: {
+      transparent: 'transparent',
       white: '#ffffff',
       gray: {
         500: '#6b7280',
@@ -25,14 +27,17 @@ module.exports = {
       indigo: {
         500: '#6366f1',
         600: '#4f46e5',
+        700: '#4338ca',
       },
     },
     fontSize: {
       base: '1rem',
       lg: '1.125rem',
       xl: '1.25rem',
-      '2xl': '2.25rem',
-      '3xl': '3.75rem',
+      '2xl': '1.875rem',
+      '3xl': '2.25rem',
+      '4xl': '3rem',
+      '5xl': '3.75rem',
     },
     boxShadow: {
       base: '0px 1px 2px 0px rgba(0,0,0,0.06), 0px 1px 3px 0px rgba(0,0,0,0.1)',
@@ -44,6 +49,7 @@ module.exports = {
     },
     extend: {
       lineHeight: {
+        12: '3rem',
         15: '3.75rem',
       },
       spacing: {
