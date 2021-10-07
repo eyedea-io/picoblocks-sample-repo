@@ -31,7 +31,7 @@ jobs:
       - name: Install 🔧 
         run: |
           npm install
-      - name: Install 🔧 
+      - name: Build 🔧 
         run: |
           npm run build picoblocks-sample-repo:build-storybook
       - name: Deploy 🚀
